@@ -17,7 +17,7 @@ pipeline{
       }
       stage('run'){
         steps{
-        sh "exec:java -Dexec.mainClass="com.example.App"
+        sh "exec:java -Dexec.mainClass='com.example.App'"
         }
       }
     }

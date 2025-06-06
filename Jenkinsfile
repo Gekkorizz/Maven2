@@ -7,7 +7,7 @@ pipeline{
     stages{
       stage('Checkout'){
         steps{
-        git "https://github.com/Gekkorizz/Maven2"
+        git "https://github.com/Gekkorizz/Maven2.git"
         }
       }
       stage('build'){
@@ -17,7 +17,7 @@ pipeline{
       }
       stage('run'){
         steps{
-        sh "exec:java -Dexec.mainClass='com.example.App'"
+        sh "mvn exec:java -Dexec.mainClass='com.example.App'"
         }
       }
     }
